@@ -1,0 +1,184 @@
+<!--Author Louis-->
+<!--Date 10 August 2023-->
+<!--Homepage with 2 images in a carousel and a summary of their services under that.-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PPM Utilities</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="Images\ppmicon.PNG" type="image/x-icon">
+  <Style>
+    .services{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 20px;
+
+    }
+    .request{
+      background-color:#636363;
+    }
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    .carousel-image {
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .carousel-image.active {
+      opacity: 1;
+    }
+
+    .carousel-box.active{
+      opacity: 1;
+    }
+    
+    .carousel-box {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 300px;
+      height:max-content;
+      background-color:#0162bd86;
+      color:black;
+      padding: 10px;
+        text-align: center;
+        opacity: 0;
+        border-radius: 20px;
+        transition: opacity 1s ease-in-out;
+
+    }
+    .btn{
+      background-color: #ef9c00;
+      color: black;
+      font-weight:bolder;
+      font-size: medium;
+      border-radius: 20px;
+      height: 50px;
+      width: 100px
+    }
+
+  @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  .service{
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) alternate forwards;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px 0px #ef9c00;
+
+  }
+  
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+  </Style>
+</head>
+<body>
+  <header>
+    <ul class="navbar">
+      <li><a href="PPM Website.html"><img src="Photos/logo (1).png" height="50px"></a></li>
+      <li><a href="Aboutus.html">About Us</a></li>    
+      <li><a href="services.html">Services</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="https://portal.ppmutilities.co.za/index.html">Portal</a></li>
+      <li><a href="" id="externalLinkButton">Tariff info</a></li>
+               <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="#" id="popupButton" class="request-quote-button" onclick="openPopup()">Request Quote</a></li>
+      <li><!-- form.123formbuilder.com script begins here -->
+       <!-- <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6469865.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-image-link" data-embed-image-link="https://cdn.123formbuilder.com/images/contact-button.png"></script>-->
+        <!-- form.123formbuilder.com script ends here --></li>
+    </ul>
+    </header>
+  <div class="carousel">
+    <img class="carousel-image active" src="Photos/iStock-1307617970.jpg" alt="Image 1">
+    <div class="carousel-box active">
+      <h3>Our Mission</h3>
+      <p>
+        To be the leading private utilities management company in the Western Cape and beyond, providing a seamless, professional and bespoke portfolio of services across the entire spectrum of utilities clientele.</p>
+        <button class="btn"><a href="Aboutus.html">About us</a></button>
+      </div>
+    <img class="carousel-image" src="Photos/iStock-1311101287.jpg" alt="Image 2">
+    <div class="carousel-box" >
+      <h3>Our Values</h3>
+      <p>
+        1. Excellence in Service<br>
+        2. Personal & professional integrity<br>
+        3. Wise stewardship of resources<br>
+        4. Dignity through job creation<br>
+        5. Lifelong Learning <br>
+               <button class="btn"><a href="Aboutus.html">About us</a></button>
+      </div>
+  </div>
+      <h2 style="text-align: center;">Our Services</h2>
+        <div class="services">
+
+    <div class="service">
+            Supply: We design the most cost effective and efficient system for the client and source and supply the most suitable metering equipment for their unique requirements.
+    </div>
+        <div class="service">Support: We provide real-time support to all our clients and our vending services are world class and available nationwide 24/7 through multiple vending platforms.
+        </div>
+        <div class="service">
+            Solutions: We strive to provide every client with the optimal solution for their utility management requirement and can provide guidance and expertise on selecting the most suitable solution.
+        </div> 
+      </div> 
+  </div>
+
+
+  <div class="popup" id="popup">
+    <div id="popup-content">
+    <span class="close-button" id="closeButton">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKaTcVvw7gHGLcpTSr1tXXgDML2KC2s90DlN8mpq9XIDTyYw/viewform?embedded=true" width="600" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>  </div>
+       </div>
+       <button id="scroll-to-top-button">&#8593;</button>
+
+  <footer>
+    <a href="terms.html">Terms and conditions</a><br>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+
+  </footer>
+
+<script type="text/javascript" src="script.js"></script>
+  <script>
+    //script for carousel
+     document.addEventListener("DOMContentLoaded", function() {
+      var carouselImages = document.querySelectorAll(".carousel-image");
+      var carouselIndex = 0;
+
+      setInterval(function() {
+        carouselImages[carouselIndex].classList.remove("active");
+        carouselIndex = (carouselIndex + 1) % carouselImages.length;
+        carouselImages[carouselIndex].classList.add("active");
+      }, 3000);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      var carouselBox = document.querySelectorAll(".carousel-box");
+      var carouselIndex = 0;
+
+      setInterval(function() {
+        carouselBox[carouselIndex].classList.remove("active");
+        carouselIndex = (carouselIndex + 1) % carouselBox.length;
+        carouselBox[carouselIndex].classList.add("active");
+      }, 3000);
+    });
+
+</script></body>
+</html>
