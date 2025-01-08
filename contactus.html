@@ -1,0 +1,250 @@
+<!--Author Louis-->
+<!--Date 10 August 2023-->
+<!--Conatct details with 8 profiles of company employees.-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link href="https://db.onlinewebfonts.com/genesis+W00+Regular" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="ppmicon.PNG" type="image/x-icon">
+
+
+  <style>
+   
+    #iframe{
+      max-height: 300px;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+     
+      grid-gap: 20px;
+    }
+    
+    .contact-form {
+      max-width: 400px;   
+      background-color: #cac4c4;
+      border-radius: 40px;
+    }
+    
+    .form-group {
+      margin: 20px;     
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    .form-group button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .contact-container {
+      background-color: #7e7d7d83;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    flex-basis: 40%;
+    padding-right: 10px; /* Adjust spacing as needed */
+    box-sizing: border-box;
+}
+
+.team-container {
+    flex-basis: 50%;
+}
+
+.contact-profiles {
+    display: grid;
+grid-template-columns: auto auto auto auto;
+    gap: 10px; /* Adjust spacing between profiles */
+}
+
+.contact-profile {
+    flex-basis: calc(50% - 10px); /* Adjust width and spacing as needed */
+    text-align: center;
+}
+
+.contact-profile img {
+  aspect-ratio: 1/1;
+    width: 75px; /* Adjust image size as needed */
+    border-radius: 100px;
+}
+
+.contact-profile h3 {
+    margin-top: 10px; /* Adjust spacing as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.company-details {
+    text-align: center;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: solid;
+    border-color: black;
+}
+
+.company-details h2 {
+    margin-bottom: 10px;
+}
+
+
+form{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+  height: auto;
+}
+ form input, form textarea{
+border: 0;
+width: auto;
+margin: 20px;
+padding: 20px;
+outline: none;
+background: #f5f5f5;
+font-size: 10px;
+ }
+
+ form button{
+  padding: 15px;
+  background: #ff5361;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px;
+  border-radius: 30px;
+ }
+ .form-group{
+  height: auto;
+ }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+     
+  </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+          <li><a href="index.html"><img src="Photos/logo (1).png" height="50px"></a></li>
+          <li><a href="Aboutus.html">About Us</a></li>    
+          <li><a href="services.html">Services</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="https://portal.ppmutilities.co.za/index.html">Portal</a></li>
+          <li><a href="" id="externalLinkButton">Tariff info</a></li>
+                   <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="#" id="popupButton" class="request-quote-button" >Request Quote</a></li>
+          <li><!-- form.123formbuilder.com script begins here -->
+           <!-- <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6469865.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-image-link" data-embed-image-link="https://cdn.123formbuilder.com/images/contact-button.png"></script>-->
+            <!-- form.123formbuilder.com script ends here --></li>
+        </ul>
+      </header> 
+      <div class="popup" id="popup">
+        <div id="popup-content">
+        <span class="close-button" id="closeButton">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKaTcVvw7gHGLcpTSr1tXXgDML2KC2s90DlN8mpq9XIDTyYw/viewform?embedded=true" width="600" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>  </div>
+           </div><!-- The popup form -->
+
+    
+           <div class="contact-container">
+            <div class="form-container">
+                <h2>Send us a message</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoaLIVCn2ctmo7vGfbx9k7A7XqG0n9EuaKCEH_Xo5Huzf5LA/viewform?embedded=true" width="530" height="856" id="iframe" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <div class="team-container">
+                <h2>Meet the Team</h2>
+                <div class="contact-profiles">
+                    <!-- Profile 1 -->
+                    <div class="contact-profile">
+                        <div><img src="Photos/Alté Bester_.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                        <div><h3>Alté Bester</h3></div>
+                    </div>
+        
+                    <!-- Profile 2 -->
+                    <div class="contact-profile">
+                        <div><img src="Photos/Anrich Bester.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                        <div><h3>Anrich Bester</h3></div>
+                    </div>
+        
+                    <!-- Repeat the above structure for the remaining profiles -->
+                    <div class="contact-profile">
+                      <div><img src="Photos/Ashwell Cleophas.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                      <div><h3>Ashwell Cleophas</h3></div>
+                  </div>
+                  <div class="contact-profile">
+                    <div><img src="Photos/GJ Bester.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                    <div><h3>GJ Bester</h3></div>
+                </div>
+                <div class="contact-profile">
+                  <div><img src="Photos/Hanli Bester.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                  <div><h3>Hanli Bester</h3></div>
+              </div>
+              <div class="contact-profile">
+                <div><img src="Photos/Heinrich Esterhuizen.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+                <div><h3>Heinrich Esterhuizen</h3></div>
+            </div>
+            <div class="contact-profile">
+              <div><img src="Photos/Roché Pentz.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+              <div><h3>Roché Pentz</h3></div>
+          </div>
+          <div class="contact-profile">
+            <div><img src="Photos/Tafadwa.jpg" alt="Company Image" style="border-radius: 100px;"></div>
+            <div><h3>Tafadwa</h3></div>
+        </div>
+                </div>
+            </div>
+        </div>
+          
+                <div class="company-details">
+
+        <h2>Company Details</h2>
+        <p>Email: queries@ppmutilities.co.za</p>
+        <p>Phone: 021 -9751430</p>
+        <p>Office Address: Unit 25, Palm Grove Centre, Corner of Main Road and Church Street, Durbanville, 7550</p>
+    </div>
+   
+    <button id="scroll-to-top-button">&#8593;</button>
+
+  <footer>
+    <a href="terms.html">Terms and conditions</a><br>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+
+  </footer>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

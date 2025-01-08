@@ -1,0 +1,341 @@
+<!--Author Louis-->
+<!--Date 10 August 2023-->
+<!--FAQ page with list of questions and answers on the left and a form on the right.-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="Photos/ppmicon.PNG" type="image/x-icon">
+
+
+  <style>
+    /* Container styles */
+    .faq-container {
+      display: flex;
+      padding: 20px;
+      background-color: #7e7e7e3f;
+  }
+
+    /* Left section styles */
+    .left-section {
+      flex: 1;
+      max-width: 100%;
+      overflow-y: auto;
+      max-height: 400px;
+    }
+
+    /* Right section styles */
+    .right-section {
+      flex: 1;
+      max-width:100%;
+      padding: 10px;
+      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.623);
+    }
+
+    /* Search bar styles */
+    .search-bar {
+      border: 1px solid #636363;
+      border-radius: 4px;
+      width: 500px;
+      height: 30px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    /* Question box styles */
+    .question-box {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 95%;
+    }
+
+    /* Answer styles */
+    .answer {
+      display: none;
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+    }
+
+    /* Box container styles */
+    .box-container {
+      height: auto;
+      width: 500px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color:#0183bd;
+    }
+
+    /* Image styles */
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+form{
+  margin: 20px;
+}
+
+        form label,
+        form textarea,
+        form input[type="text"],
+        form input[type="email"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        form input[type="submit"] {
+            margin-top: 20px;
+              background-color: #ef9c00;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0183bd;
+        }
+         .box{
+          background-color: white;
+          margin: 10px;
+         }   
+  </style>
+</head>
+<body>
+  <header>
+    <ul class="navbar">
+      <li><a href="index.html"><img src="Photos/logo (1).png" height="50px"></a></li>
+      <li><a href="Aboutus.html">About Us</a></li>    
+      <li><a href="services.html">Services</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="https://portal.ppmutilities.co.za/index.html">Portal</a></li>
+      <li><a href="" id="externalLinkButton">Tariff info</a></li>
+               <li><a href="contactus.html">Contact Us</a></li>
+      <li><!-- form.123formbuilder.com script begins here -->
+       <!-- <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6469865.js?type=lightbox" data-role="form" data-default-width="650px" data-embed-type="lightbox-image-link" data-embed-image-link="https://cdn.123formbuilder.com/images/contact-button.png"></script>-->
+        <!-- form.123formbuilder.com script ends here --></li>
+    </ul> 
+    </header>
+  <h1 style="margin-left: 30px;">Do you need help?</h1>
+  <h2 style="margin-left: 30px;">Seek your question to find your answer</h2>
+
+  <div class="faq-container">
+    <div class="left-section">
+      <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+      <div class="box-container">
+        <div id="question-list"></div>
+      </div>
+    </div>
+  
+    <div class="right-section">
+      <div class="box">
+        <h2>Did not find your answer, send us a message and we will come back to you</h2>
+        <div>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoaLIVCn2ctmo7vGfbx9k7A7XqG0n9EuaKCEH_Xo5Huzf5LA/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button id="scroll-to-top-button">&#8593;</button>
+
+  <footer>
+    <a href="terms.html">Terms and conditions</a><br>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+
+  </footer>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    // Sample list of questions and answers
+    const faqData = [
+      {
+        question: "Where can I buy prepaid electricity?",
+        answer: "You can buy prepaid electricity through the following options: PPM Portal app, mobile banking apps, online platforms like Easypay, Unipin, Prepaid24 and over the counter at Pick N Pay, Shoprite, Checkers, Usave, OK and Spar."
+      },
+      {
+        question: "Where do I get my meter number?",
+        answer: "The meter number is the 11 digit number found on the meter itself, or on the keypad display."
+      },
+      {
+        question: "How do I load the pre-payment meter with electricity?",
+        answer: "A.When you purchase electricity you will receive a receipt, an SMS or an e-mail. This receipt will include the meter number and a 20 digit token. Punch the 20 digit token number into the meter, followed by the enter button. Your meter will then recharge with the amount of kWh units as indicated on the receipt."
+      },
+      {
+        question: "Why haven’t I received my token?",
+        answer: "When you purchase electricity you will receive a receipt, an SMS or an e-mail. This receipt will include the meter number and a 20 digit token. Punch the 20 digit token number into the meter, followed by the enter button. Your meter will then recharge with the amount of kWh units as indicated on the receipt."
+      },
+      {
+        question: "Can an electricity token be reversed?",
+        answer: "Unfortunately, we are not able to reverse your token. Prepaid electricity tokens are issued on a specific meter number and can only be redeemed on that meter. However, even though PPM cannot reverse your token, you can contact your municipality directly, they may be able to assist you if you haven’t yet redeemed the token."
+      },
+      {
+        question: "I lost my receipt with the token number. What should I do?",
+        answer: "You can either go back to the vendor and ask them to reissue the token. Alternatively, you can contact our Service Desk and we will be able to assist you telephonically."
+      },
+      {
+        question: "Can I still purchase electricity if I do not have a white meter card?",
+        answer: "Yes, you can. The store will require the meter number, which is the 11 digit number found on the meter itself or on its display. Should you wish to replace a lost white meter card, please contact our Service Desk and we will assist you. Please note that it is very important to ensure you purchase electricity on the correct meter number. The token issued is unique to the serial number of the meter and will not work on any other meter. The receipt you receive will indicate the meter number. Ensure that this number corresponds with the number on your meter."
+      },
+      {
+        question: "What tariff is used on the pre-payment meter and when does it increase?",
+        answer: "The tariff linked to the pre-payment meter differs depending on the area where you live. You can go to the ‘My Tariff’ page and we will supply you with the applicable tariff for your meter number. The tariffs for Eskom increase annually in April and for local municipalities in July."
+      },
+      {
+        question: "What do I do when my electricity is off?",
+        answer: "Start by identifying if your meter display is on and, if it is, whether the display shows kWh. If the indicator on the meter shows 0, you need to purchase a token.If the meter shows that there are units available, but the electricity is still off, check your distribution board to ensure all the circuit breakers are switched on.If the meter display is off, find out if your neighbours have power. If not, there may be an area power outage. If they do have power, contact our Service Desk and a technician will assist."
+      },
+      {
+        question:"How can I purchase pre-payment meters?",
+        answer:" Have various solutions to address different requirements. Please contact us through ‘Request a quote’ on this site, and we will provide the information and pricing for the most suitable solution.",
+      },
+      {
+        question:"What is a smart water meter?",
+        anwser:"A smart water meter is a water meter that is uses wireless technology to enable two-way communication between the utility provider and consumers, allowing real-time data exchange and remote management of services.",
+
+      },
+      {
+        question:"How do I top-up my smart water meter?",
+        answer:"PPM’s smart water meters are postpaid, not prepaid. You do not have  to top-up your smart water meter. Your water bill is calculated based on your consumption and on the 1st of every month, the previous month’s bill is loaded on your electricity meter account, or you will receive the bill from your managing agent or Body Corporate.",
+      },
+    {
+      question:"How is my smart water meter bill calculated?",
+      answer:"The bill is calculated based on actual water consumption in litres and the relevant municipal water and sanitation rates. Refer to the “My Tariff” page for more information about your tariff.",
+
+    },
+    {
+      question:"How can I check how much water I am using?",
+      answer:"You can manage and monitor your water consumption on the PPM Portal App. Consult the PPM Portal FAQs.",
+
+    },
+    {
+      question:"Where can I buy prepaid water?",
+      answer:"You can buy prepaid water through the following options: PPM Portal app, mobile banking apps, online platforms like Easypay, Unipin, Prepaid24 and over the counter at Pick N Pay, Shoprite, Checkers, Usave, OK and Spar. Choose ‘buy electricity’ on your banking app.",
+    },
+    {
+      question:"Where do I get my meter number?",
+      answer:"For Laison and Utilities meters, the meter number is the 11 digit number found on the meter itself, or on the keypad display. For Lesira meters, you use the number on the keypad to buy tokens.",
+    },
+    {
+      question:" How do I load the pre-payment meter with water?",
+      answer:".When you purchase water you will receive a receipt, an SMS or an e-mail. This receipt will include the meter number and a 20 digit token. Punch the 20 digit token number into the meter or keypad, followed by the enter button. Your meter will then recharge with the amount of KL units as indicated on the receipt.",
+    },
+    {
+      question:"Why haven’t I received my token?",
+      answer:"There are various reasons that could be causing the delay in your tokens being sent. Kindly contact our Service Desk so that one of our customer service officers can assist you in getting your token(s)",
+    },
+    {
+      question:"Can a water token be reversed?",
+      answer:"Unfortunately, we are not able to reverse your token. Prepaid water tokens are issued on a specific meter number and can only be redeemed on that meter. However, even though PPM cannot reverse your token, you can contact your municipality directly, they may be able to assist you if you haven’t yet redeemed the token.",
+    },
+    {
+      question:" I lost my receipt with the token number. What should I do?",
+      answer:"You can either go back to the vendor and ask them to reissue the token. Alternatively, you can contact our Service Desk and we will be able to assist you telephonically.",
+    },
+    {
+      question:"Can I still purchase water if I do not have a white meter card?",
+      answer:"Yes, you can. The vendor will require the meter number, which is the 11 digit number found on the meter itself or on its display for Laison or Utilities meters. For Lesira meters, you use the number on the keypad to buy tokens. Should you wish to replace a lost white meter card, please contact our Service Desk and we will assist you. Please note that it is very important to ensure you purchase water on the correct meter number. The token issued is unique to the serial number of the meter and will not work on any other meter. The receipt you receive will indicate the meter number. Ensure that this number corresponds with the number on your meter or keypad.",
+    },
+    {
+      question:"What tariff is used on the pre-payment meter and when does it increase?",
+      answer:"The tariff linked to the pre-payment meter differs depending on the area where you live. You can go to the ‘My Tariff’ page and we will supply you with the applicable tariff for your meter number. The tariffs for Eskom increase annually in April and for local municipalities in July.",
+    },
+    {
+      question:"How can I purchase pre-payment water meters?",
+      answer:"We have various solutions to address different requirements. Please contact us through ‘Request a quote’ on this site, and we will provide the information and pricing for the most suitable solution.",
+    },
+    {
+      question:"What do I do when my water is off?",
+      answer:"Start by identifying if your meter keypad display is on and, if it is, whether the display shows KL. If the indicator on the meter shows 0, you need to purchase a token. If the meter shows that there are units available, but the water is still off, find out if your neighbours have water. If not, there may be an area water outage. If they do have water, contact our Service Desk and a technician will assist.",
+    },
+    {
+      question:"My water meter keypad shows ‘TIME OUT’, what do I do?",
+      answer:"Stand closer to the meter and try again. If it does not work, contact our Service Desk.",
+    },
+    {
+      question:"I have credit on my water meter, but no water. What do I do?",
+      answer:"Press 2 to check if credit is stuck in wallet. If yes, press 2 again to resend. If it does not work, contact our Service Desk.",
+    },
+    {
+      question:"My water meter keypad shows ‘INVALID TOKEN’, what do I do?",
+      answer:"Check if the number on the CIU (keypad) is the same number as the one that was used to buy the token.",
+    },
+    {
+      question:"My meter is leaking, what should I do?",
+      answer:"Check where exactly the leaks is coming from. Is it from the meter or the fittings/geyser? If it is from the meter, contact our Service Desk.",
+    },
+    {
+      question:"My meter shows 1000L credit, but the water stopped. What should I do?",
+      answer:"This is a low credit warning. You must buy a token to top up the credit on the meter. Do not let the credit on the meter run out completely because this will damage the meter.",
+    
+    }
+      ];
+
+    // Get required elements
+    const searchInput = document.getElementById('search-bar');
+    const questionList = document.getElementById('question-list');
+
+    // Function to display the list of questions
+    function displayQuestions() {
+      questionList.innerHTML = '';
+
+      for (let i = 0; i < faqData.length; i++) {
+        const faq = faqData[i];
+        const questionBox = document.createElement('div');
+        questionBox.classList.add('question-box');
+        questionBox.textContent = faq.question;
+
+        // Create answer element
+        const answer = document.createElement('div');
+        answer.classList.add('answer');
+        answer.textContent = faq.answer;
+
+        // Toggle answer visibility on question click
+        questionBox.addEventListener('click', () => {
+          answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Append question and answer to question list
+        questionList.appendChild(questionBox);
+        questionList.appendChild(answer);
+      }
+    }
+
+    // Function to filter the questions based on search input
+    function filterQuestions() {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      for (let i = 0; i < faqData.length; i++) {
+        const faq = faqData[i];
+        const questionBox = questionList.children[i * 2];
+        const answer = questionList.children[i * 2 + 1];
+
+        if (faq.question.toLowerCase().includes(searchTerm)) {
+          questionBox.style.display = 'block';
+          answer.style.display = 'none';
+        } else {
+          questionBox.style.display = 'none';
+          answer.style.display = 'none';
+        }
+      }
+    }
+
+    // Event listener for search input
+    searchInput.addEventListener('input', filterQuestions);
+
+    // Display the initial list of questions
+    displayQuestions();
+  </script>
+</body>
+</html>
