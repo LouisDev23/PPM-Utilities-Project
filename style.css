@@ -1,0 +1,158 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Toxigenesis W00 Regular";
+    margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #636363;
+}
+
+header {
+  background-color: #FFFFFF;
+  color: #0183bd;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  background-color: #636363;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+
+  
+  .navbar {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+  }
+  a{
+    color: inherit;
+    text-decoration:double;
+    transition: 0.25s ease;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+  }  
+
+  ul li {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  ul:hover a{
+  color:#ef9c00;
+  }
+  ul:hover a:hover{
+    color: #0183bd;
+    box-shadow: 0 2px 0 0 currentColor;
+  }
+   /* Button Styles */
+   .request-quote-button {
+    display: inline-block;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #636363;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+    cursor:pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .request-quote-button:hover {
+    background-color: #ef9c00;
+  }
+
+  @import url(https://db.onlinewebfonts.com/c/a10dd78827392d4bba2e1e09004b529e?family=Toxigenesis+W00+Regular);
+
+  @font-face {
+    font-family: "Toxigenesis W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.eot");
+    src: url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a10dd78827392d4bba2e1e09004b529e.svg#Toxigenesis W00 Regular")format("svg");
+}
+ /* Styling for the popup container */
+ .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the close button */
+.close {
+  float: right;
+  cursor: pointer;
+}
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#scroll-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #FF5C00;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#scroll-to-top-button:hover {
+  background-color: #FF7D32;
+}
